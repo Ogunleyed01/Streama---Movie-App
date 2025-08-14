@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #22254b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #373b69;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header input {
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid #22254b;
+}
+
+header input::placeholder {
+    color: #7378c5;
+}
+
+header input:focus {
+    outline: none;
+    background-color: #22254b;
+}
+
+.brand h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 80px; 
+}
+
+.movie {
+    margin: 1.5rem;
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem 1rem;
+    color: white;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: #22254b;
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    color: rgb(61, 203, 61);
+}
+
+.movie-info span.orange {
+    color: rgb(222, 170, 73);
+}
+
+.movie-info span.red {
+     color: red;
+}
+
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #373b69;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
